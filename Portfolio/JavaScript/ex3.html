@@ -1,0 +1,47 @@
+<html>
+<head><title>Les jours</title></head>
+<body>
+<script>
+ m=Number(prompt("Entrez le numero du mois","")); 
+ a=Number(prompt("Entrez le numero de l’année","")); 
+ switch(m){
+     case 1 : 
+         j=31;
+         break;
+   case 3 :
+         j=31;
+         break;
+   case 5 : 
+         j=31;
+         break;
+   case 7 :
+   j=31;
+         break; 
+   case 8 : 
+   j=31;
+         break;
+   case 12:
+   j=31;
+         break;
+   case 4 : 
+   j=30; 
+   break;
+   case 6 : 
+   j=30; 
+   break;
+   case 9 : 
+     j=30; 
+   break;
+   case 11 : 
+   j=30; 
+   break;
+   case 2 : 
+   if (a%4==0) 
+   j=29; 
+   else 
+   j=28; 
+   break;}
+   alert("Le nombre de jours du mois souhaité est  : "+ j);
+</script>
+</body>
+</html>

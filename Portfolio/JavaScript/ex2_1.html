@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+
+
+</HEAD>
+<BODY>
+    <SCRIPT>
+    function Moyenne(form1) {
+var DC1 = parseFloat( document.form1.input1.value ), Coeff1=parseFloat( document.form1.input2.value) , DC2=parseFloat( document.form1.input3.value), Coeff2=parseFloat( document.form1.input4.value), DS=parseFloat( document.form1.input5.value), Coeff3=parseFloat( document.form1.input6.value);
+var resultat;
+resultat = (DC1 * Coeff1 + DC2 * Coeff2 + DS * Coeff3 ) / (Coeff1+Coeff2+Coeff3);
+alert("La moyenne est " + resultat );
+}
+    </SCRIPT>
+<FORM NAME="form1">
+<INPUT TYPE="number" NAME="input1"  > La note du DC1 <BR>
+<INPUT TYPE="number" NAME="input2" > Le coefficient du DC1<BR>
+<INPUT TYPE="number" NAME="input3" > La note du DC2 <BR>
+<INPUT TYPE="number" NAME="input4" > Le coefficient du DC2<BR>
+<INPUT TYPE="number" NAME="input5" > La note du DS <BR>
+<INPUT TYPE="number" NAME="input6" > Le coefficient du DS<BR>
+        
+<INPUT TYPE="button" NAME="bouton" VALUE="calculer" onClick="Moyenne(form1)">
+</FORM>
+</BODY>
+</HTML>

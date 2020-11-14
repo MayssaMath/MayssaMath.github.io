@@ -1,0 +1,73 @@
+img{
+	box-shadow: 8px 8px 0px rgb(170, 170, 170); 
+}
+
+td{
+	color: rgb(58, 49, 88);
+}
+article{
+    color: rgb(58, 49, 88);
+}
+h5{
+	color: rgb(70, 81, 180);
+}
+h1{
+	 color: cornflowerblue;
+}
+h2 {
+	border: thick double rgb(28, 47, 131);
+    font-size:2em;
+    
+}
+
+H2{
+	color: steelblue;
+}
+
+
+p {
+font-size:11px;
+margin:5px 0 5px;
+text-align:justify;
+}
+
+
+
+
+
+body { 
+    font-family:'Coustard', sans-serif;
+	margin:auto;
+	width:960px;
+    line-height:22px;
+    padding:20px 0 0;
+}
+
+
+
+
+a:link
+{color: darkblue;}
+
+
+footer 
+{ 
+position: relative;
+clear:both;
+padding-top: 10px;
+text-align:center;
+color: cornflowerblue; 
+font-size:12px;
+font-family: Arial;}
+
+ @media screen and (max-width: 600px)
+  {
+    h2 {
+      color: blue;
+       }
+  }
+  @media screen and (max-width: 992px) {
+    h2 {
+      background-color: blue;
+    }
+  }

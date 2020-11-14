@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head><title>FORMATION</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css" />
+<script  src="index.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+
+</head>
+
+
+<body bgcolor="white">
+<h1 >Contact</h1>
+<div> Be called back for more information</div><br>
+
+<form  action="resultat.html" method="post" >
+<pre>
+First name(*) : <input type="text" placeholder="Enter name.."  id="name" name="name" required autocomplete="on"  oninput=""><br><br>
+Last name(*)  : <input type="text" placeholder="Enter surname.."  id="surname" name="surname"required autocomplete="on"><br><br>
+
+You wanted to be 
+ contacted by   :  <SELECT name="list" >
+<OPTION VALUE="Phone" >Phone</OPTION>
+<OPTION VALUE="Mail">Mail</OPTION>
+<OPTION VALUE="Msg">Msg</OPTION>
+
+</SELECT><br>
+
+Phone number   : <input type="tel" class="target" name="tel"autocomplete="on"> <br>
+ When       (*): <input type="date" required autocomplete="on">                                            
+<br>
+ Between    (*): <input type="time" name="start" value="07:00" required autocomplete="on"> and <input type="time" name="end" value="07:00" required autocomplete="on">
+ <br>
+
+ <input type="reset" value="Cancel">    <input type="submit" value="Submit" >
+</pre>
+</form>
+
+<h3>number of visitors sessionstorage : </h3><div id="CounterVisitor"></div>
+
+<h3>number of visitors localstorage : </h3><div id="CounterVisitor2"></div>
+
+
+</script>
+
+</body>
+<script>
+
+$(document).ready(function(){ alert("ready");
+    if(typeof sessionStorage!='undefined')
+  {
+          if('on_load_counter' in sessionStorage) {
+
+             var x = sessionStorage.getItem('on_load_counter');
+      
+             x++;
+
+             sessionStorage.setItem("on_load_counter",x);
+
+             document.getElementById('CounterVisitor').innerHTML = x;
+
+             alert("Message récupéré sessionStorage"+ x);
+                                                   }
+            else {
+            alert("on_load_counter non def sessionStorage");
+            sessionStorage.setItem("on_load_counter",1);
+                 }
+  } 
+  
+
+if(typeof localStorage!='undefined') 
+{
+    if('on_load_counter' in localStorage) 
+     {    var x = localStorage.getItem('on_load_counter');
+           x++;
+
+          localStorage.setItem("on_load_counter",x);
+
+          document.getElementById('CounterVisitor2').innerHTML = x;
+
+           alert("Message récupéré localStorage "+ x);
+    }
+    else {
+         alert("on_load_counter non def localStorage");
+         localStorage.setItem("on_load_counter",1);
+         }
+ } 
+
+});
+</script>
+
+</html> 

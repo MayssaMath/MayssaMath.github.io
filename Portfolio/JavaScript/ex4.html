@@ -1,0 +1,19 @@
+<html>
+    <head><title>Calcul</title>
+        <script>
+        function resultat()
+        { var a=document.form.champ1.value;
+        var b=eval(a);
+        document.form.champ2.value=b;}
+        </script>
+        </head>
+<body>
+    <form name="form">
+        <input type="text" name="champ1">
+        <input type="button"  value=" = " onclick="resultat()">
+        <input type="text" name="champ2">
+    
+        
+    </form>
+</body>
+</html>
